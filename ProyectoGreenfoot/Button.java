@@ -1,19 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class Button here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Button extends Actor
 {
-    /**
-     * Act - do whatever the Button wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
+    private boolean mouseOver=false;
+    
+    public void mouseOverButton()
     {
-        // Add your action code here.
+        if(Greenfoot.mouseMoved(null)){
+            mouseOver=Greenfoot.mouseMoved(this);
+        }
+        
+        if(mouseOver){
+            this.getImage().setTransparency(100);
+        } else{
+            this.getImage().setTransparency(255);
+        }
+    }
+    
+    public void checkClick(World world){
+        mouseOverButton();
+        
+        if(Greenfoot.mouseClicked(this)){
+            Greenfoot.setWorld(world);
+        }
     }
 }
