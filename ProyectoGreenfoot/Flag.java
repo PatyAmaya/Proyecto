@@ -1,10 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class PlayButton extends Button
+public class Flag extends Actor
 {
     public void act()
     {
-        mouseOverButton();
-        checkClick(new Level1());
+        // Add your action code here.
     }
 }

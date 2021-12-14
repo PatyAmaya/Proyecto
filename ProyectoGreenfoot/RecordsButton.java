@@ -5,5 +5,6 @@ public class RecordsButton extends Button
     public void act()
     {
         mouseOverButton();
+        checkClick(new RecordsScreen());
     }
 }
