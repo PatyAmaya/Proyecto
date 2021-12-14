@@ -1,0 +1,5 @@
+Andy,200
+Betty,200
+Armando,200
+Paty,200
+Marcela,180

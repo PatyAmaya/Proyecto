@@ -3,7 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Level2 extends World implements ScoreManager
 {
 
-    public Level2()
+    public Level2(int score)
     {    
         super(600, 400, 1); 
         prepare();
@@ -31,17 +31,16 @@ public class Level2 extends World implements ScoreManager
         addObject(cookie2,376,166);
         Flag flag = new Flag();
         addObject(flag,550,93);
+        HomeButton homeButton = new HomeButton();
+        addObject(homeButton,572,25);
     }
     
     public void updateScore(int score){
-        this.showText("Puntaje "+score, 532, 35);
+        this.showText("Puntaje "+score, 480, 25);
     }
     
     public void winMessage(){
         this.showText("Great!",300,200);
     }
     
-    public void moveScenaary(){
-        
-    }
 }

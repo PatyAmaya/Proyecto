@@ -1,13 +1,11 @@
 #BlueJ class context
 comment0.target=Level2
-comment1.params=
-comment1.target=Level2()
+comment1.params=score
+comment1.target=Level2(int)
 comment2.params=
 comment2.target=void\ prepare()
 comment3.params=score
 comment3.target=void\ updateScore(int)
 comment4.params=
 comment4.target=void\ winMessage()
-comment5.params=
-comment5.target=void\ moveScenaary()
-numComments=6
+numComments=5

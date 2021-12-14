@@ -35,7 +35,6 @@ public class RecordManager {
                     break;
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }

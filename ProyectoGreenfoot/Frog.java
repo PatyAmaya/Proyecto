@@ -1,4 +1,7 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
+import java.io.*;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Frog extends Actor
 {
@@ -12,6 +15,8 @@ public class Frog extends Actor
     private ScoreManager scoreManager;
     private boolean touchFlag=false;
     private boolean lose=false;
+    
+    private RecordManager recordManager = new RecordManager(5,"records.txt");
     
     private World actualWorld=getWorld();
     
@@ -33,10 +38,9 @@ public class Frog extends Actor
             checkFlag();
             checkLose();
         }else if(touchFlag){
-            showWinMessage();
-            //actualWorld.nextWorld();
+            winCase();
         } else if(lose){
-            showLoseMessage();
+            loseCase();
         }
         
     }
@@ -104,14 +108,35 @@ public class Frog extends Actor
     private void checkLose(){
         if(getY()>=370){
             lose=true;
+            
         }
     }
     
     private void showWinMessage(){
-        getWorld().showText("Great!",300,200);
+        //getWorld().showText("Great!",300,200);
+        getWorld().addObject(new GreatLabel(), 300, 200);
     }
     
     private void showLoseMessage(){
         getWorld().showText("You Lose!!",300,200);
+    }
+    
+    private void loseCase(){
+        showLoseMessage();
+        score=0;
+        Greenfoot.setWorld(new Level1());
+    }
+    
+    private void winCase(){
+        showWinMessage();
+        saveScore();
+        Greenfoot.setWorld(new Level2(score));
+    }
+    
+    
+    private void saveScore(){
+        String nombre = JOptionPane.showInputDialog(null, "Player: ");
+        Record record = new Record(nombre,score);
+        recordManager.save(record);
     }
 }

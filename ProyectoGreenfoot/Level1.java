@@ -23,13 +23,11 @@ public class Level1 extends World implements ScoreManager
         addObject(new Star(),395,142);
         addObject(new Star(),465,142);
         addObject(new Star(),535,142);
+        HomeButton homeButton = new HomeButton();
+        addObject(homeButton,572,25);
     }
     
     public void updateScore(int score){
-        this.showText("Puntaje "+score, 532, 35);
-    }
-    
-    public void nextWorld(){
-        Greenfoot.setWorld(new Level2());
+        this.showText("Puntaje "+score, 480, 25);
     }
 }

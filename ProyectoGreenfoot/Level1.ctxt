@@ -6,6 +6,4 @@ comment2.params=
 comment2.target=void\ prepare()
 comment3.params=score
 comment3.target=void\ updateScore(int)
-comment4.params=
-comment4.target=void\ nextWorld()
-numComments=5
+numComments=4
