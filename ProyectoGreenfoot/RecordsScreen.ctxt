@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=RecordsScreen
+comment1.params=
+comment1.target=RecordsScreen()
+comment2.params=
+comment2.target=void\ showScore()
+comment3.params=
+comment3.target=void\ prepare()
+comment3.text=\r\n\ \ \ \ public\ void\ showScore(){\r\n\ \ \ \ \ \ \ \ int\ y\ \=\ 100;\r\n\ \ \ \ \ \ \ \ String\ nameAndScore;\r\n\r\n\ \ \ \ \ \ \ \ try{\r\n\ \ \ \ \ \ \ \ \ \ \ \ File\ file\ \=\ new\ File("records.txt");\ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ Scanner\ entry\ \=\ new\ Scanner(new\ FileReader(file));\r\n\r\n\ \ \ \ \ \ \ \ \ \ \ \ while(entry.hasNext()){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nameAndScore\ \=\ entry.next();\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GreenfootImage\ showText\ \=\ getBackground();\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Font\ adjustedFont\ \=\ new\ Font(null,true,\ false,\ 30);\r\n\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ showText.setColor(Color.BLACK);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ showText.setFont(adjustedFont);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ showText.drawString(nameAndScore,\ 140,\ y+\=52);\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }catch(IOException\ e){\r\n\r\n\ \ \ \ \ \ \ \ }\r\n}
+numComments=4
